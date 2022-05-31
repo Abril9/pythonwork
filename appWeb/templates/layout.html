@@ -3,24 +3,34 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
-    <!--BOOTSRAP 4 usando una CDN   -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-</head>
-<body>
-    <h1 class="titulo">Hola perrekes \\ </h1>
-    <div>
-        <h6> mi primer sitio con python! </h5>        
-     </div>
-</body>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+        <!--BOOTSRAP 4 usando una CDN   -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1 class="titulo">Hola perrekes \\ </h1>
+        <div>
+            <h6> mi primer sitio con python! </h5>        
+        </div>
+    </body>
+
+    <!-- Asi se inica que va un bloque de contenido, la parte que va a cambiar: -->
+    <div class="container">
+        {% block content %}
+        {% endblock%}
+   
+    </div>
+
+    <footer>
+
+        <a href="/" class="btn btn-primary" role="button" data-bs-toggle="button"> Volver a home</a>
+        <a href="/info" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true"> Reload info</a>
+        <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Este boton no hace nada</a>
+        
+    </footer>
 </html>
-
-<!-- Asi se inica que va un bloque de contenido, la parte que va a cambiar: -->
-{% block content %}
-
-{% endblock%}
