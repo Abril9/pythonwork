@@ -1,6 +1,10 @@
 #  pythonwork
 ## Aprendiendo python bebes :) 
 
+
+Para bajarse el repositorio a una carpeta (pythonwork):
+
+
 ```git clone  https://github.com/Abril9/pythonwork.git```
 
 
